@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: "Xy-Element"
-  text: "this is toy ElementPlus component"
+  text: "高仿 ElementPlus 组件库"
   tagline: My great project tagline
   actions:
     - theme: brand
