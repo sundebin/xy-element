@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "cross-env NODE_ENV=test pnpm --filter @xy-element/hooks build && vitest --run --coverage",
+    "test:watch":"cross-env NODE_ENV=test pnpm --filter @xy-element/hooks build && vitest --coverage"
   },
   "keywords": [],
   "author": "",

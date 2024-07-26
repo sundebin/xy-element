@@ -8,7 +8,10 @@
     "docs:dev": "pnpm --filter @xy-element/docs dev",
     "docs:build": "pnpm --filter @xy-element/docs build",
     "build": "pnpm --filter xy-element build",
-    "test": "echo todo"
+    "test": "run-s test-utils test-hooks test-comp",
+    "test-comp": "cross-env NODE_ENV=test pnpm --filter @xy-element/components test",
+    "test-utils": "cross-env NODE_ENV=test pnpm --filter @xy-element/utils test",
+    "test-hooks": "cross-env NODE_ENV=test pnpm --filter @xy-element/hooks test"
   },
   "keywords": [],
   "author": "",
@@ -24,7 +27,9 @@
     "@vitejs/plugin-vue-jsx": "^3.1.0",
     "@vue/tsconfig": "^0.5.1",
     "async-validator": "^4.2.5",
+    "cross-env": "^7.0.3",
     "postcss-color-mix": "^1.1.0",
+    "npm-run-all": "^4.1.5",
     "postcss-each": "^1.1.0",
     "postcss-each-variables": "^0.3.0",
     "postcss-for": "^2.1.1",
@@ -35,11 +40,11 @@
     "vue-tsc": "^1.8.27"
   },
   "dependencies": {
+    "@xy-element/hooks": "workspace:*",
+    "@xy-element/theme": "workspace:*",
+    "@xy-element/utils": "workspace:*",
     "lodash-es": "^4.17.21",
     "vue": "^3.4.19",
-    "xy-element": "workspace:*",
-    "@xy-element/hooks": "workspace:*",
-    "@xy-element/utils": "workspace:*",
-    "@xy-element/theme": "workspace:*"
+    "xy-element": "workspace:*"
   }
 }

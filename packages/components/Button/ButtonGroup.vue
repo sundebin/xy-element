@@ -19,7 +19,7 @@ provide(
 </script>
 
 <template>
-<div class="er-button-group">
+<div class="xy-button-group">
     <slot></slot>
     </div>
     </template>
