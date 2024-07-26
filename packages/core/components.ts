@@ -1,4 +1,6 @@
-import { XyButton } from '@xy-element/components';
+import { XyButton,
+    XyButtonGroup,
+    XyIcon } from '@xy-element/components';
 import type { Plugin } from 'vue';
 
-export default [XyButton] as Plugin[];
+export default [XyButton,XyButtonGroup,XyIcon] as Plugin[];
